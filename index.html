@@ -64,7 +64,14 @@
     margin-inline:auto;   /* center horizontally */
     background-color:var(--bg);
 }
-
+    .portrait {
+    width:auto;
+    height:220px;      /* fix portrait height */
+    object-fit:contain;
+    display:block;
+    margin-inline:auto;
+    background-color:var(--bg);
+}
     /* —— Art gallery (thumbnails linking to full) —— */
     .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
     .gallery a{display:block;border:1px solid var(--line);box-shadow:var(--shadow)}
@@ -121,7 +128,7 @@
         </div>
       </div>
       <div class="card" style="padding:0">
-        <img src="assets/profile.jpg" alt="Portrait of Elena Kopteva" class="cover" style="height:100%">
+        <img src="assets/profile.jpg" alt="Portrait of Elena Kopteva" class="portrait">
       </div>
     </section>
 
