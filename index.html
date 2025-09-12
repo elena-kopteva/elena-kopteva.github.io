@@ -36,8 +36,38 @@
     .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);background:color-mix(in oklab, var(--card) 95%, transparent)}
     select.pill{appearance:none;background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px); background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right:34px}
 
-    .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;padding-top:24px}
-    .card{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:22px}
+   .hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+  align-items: stretch;       /* make both grid cells stretch equally */
+  padding-top: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  display: flex;              /* let card contents flex */
+  flex-direction: column;
+  justify-content: center;    /* vertically center content if shorter */
+}
+
+/* second card: portrait only—remove inner padding */
+.hero .card:nth-child(2) {
+  padding: 0;
+}
+
+/* portrait image */
+.portrait {
+  width: 100%;          /* fill card horizontally */
+  height: 100%;         /* match the card’s height */
+  object-fit: cover;    /* keep aspect, crop if needed */
+  display: block;
+  margin: 0;            /* remove side margins */
+  background-color: var(--bg);
+}
     /* No rounded corners */
     .card, .pill, .brand .avatar, img, input, select, textarea { border-radius:0; }
 
@@ -64,14 +94,7 @@
     margin-inline:auto;   /* center horizontally */
     background-color:var(--bg);
 }
-    .portrait {
-    width:auto;
-    height:320px;      /* fix portrait height */
-    object-fit:contain;
-    display:block;
-    margin-inline:auto;
-    background-color:var(--bg);
-}
+    
     /* —— Art gallery (thumbnails linking to full) —— */
     .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
     .gallery a{display:block;border:1px solid var(--line);box-shadow:var(--shadow)}
