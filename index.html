@@ -96,34 +96,49 @@
 }
     
     /* —— Art gallery (thumbnails linking to full) —— */
-    .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .gallery a{display:block;border:1px solid var(--line);box-shadow:var(--shadow)}
-    .gallery img{width:100%;height:220px;object-fit:cover;display:block}
-    .gallery figcaption{font-size:12px;color:var(--muted);margin-top:6px}
-    @media (max-width:880px){.gallery{grid-template-columns:1fr 1fr}}
+   /* —— Art gallery (thumbnails linking to full) —— */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.gallery a {
+  display: block;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.gallery figcaption {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
 
-/* Mobile/tablet: 2-up grid with uniform tiles (no gaps) */
+/* --- Add this new responsive block BELOW the existing gallery styles --- */
 @media (max-width: 880px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Make each tile a consistent 4:3 box */
   .gallery a {
     display: block;
-    aspect-ratio: 4 / 3;   /* try 1/1 if you prefer squares */
-    overflow: hidden;      /* hide cropped edges */
+    aspect-ratio: 4 / 3;  /* or 1/1 for squares */
+    overflow: hidden;
   }
 
   .gallery img {
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* fills the 4:3 box cleanly */
+    object-fit: cover;
     display: block;
   }
 }
 
-/* Very small phones: single column, still uniform tiles */
 @media (max-width: 520px) {
   .gallery {
     grid-template-columns: 1fr;
