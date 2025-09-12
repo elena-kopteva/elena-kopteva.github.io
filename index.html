@@ -56,7 +56,14 @@
     section[id]{scroll-margin-top:90px}
 
     /* —— Research covers —— */
-    .cover{width:100%;height:220px;object-fit:cover;border-bottom:1px solid var(--line);display:block}
+    .cover {
+    width:100%;
+    height:auto;          /* allow height to scale naturally */
+    object-fit:contain;   /* keep full image visible inside box */
+    border-bottom:1px solid var(--line);
+    display:block;
+    background-color:var(--bg); /* optional: fills any empty space */
+}
 
     /* —— Art gallery (thumbnails linking to full) —— */
     .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
