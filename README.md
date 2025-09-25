@@ -5,7 +5,6 @@ This repository hosts my personal website:
 
 The site includes:
 - Research interests and selected publications
-- Teaching materials
 - Art gallery
 - Contact information
 
