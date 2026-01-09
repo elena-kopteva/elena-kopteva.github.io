@@ -99,11 +99,6 @@
   text-align: justify;
   text-justify: inter-word;
 }
-    
-/* —— Research grid: single-column reading mode —— */
-#research-grid.reading {
-  grid-template-columns: 1fr;
-}
 
     /* —— Research: collapsible “Read more” cards —— */
 .research-summary {
@@ -456,17 +451,6 @@
     // Initialize theme dropdown from saved value
     (function(){ try{ const saved = localStorage.getItem('theme')||'default'; const sel=document.querySelector('select[aria-label="Select color theme"]'); if(sel){ sel.value=saved; }}catch(e){} })();
   </script>
-
-  <script>
-  // Switch research layout to single column when reading
-  document.querySelectorAll('#research details.research-details').forEach(d => {
-    d.addEventListener('toggle', () => {
-      const grid = document.getElementById('research-grid');
-      const anyOpen = !!document.querySelector('#research details.research-details[open]');
-      grid.classList.toggle('reading', anyOpen);
-    });
-  });
-</script>
 
   <!-- Structured data -->
   <script type="application/ld+json">
