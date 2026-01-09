@@ -99,6 +99,12 @@
   text-align: justify;
   text-justify: inter-word;
 }
+    
+/* —— Research grid: single-column reading mode —— */
+#research-grid.reading {
+  grid-template-columns: 1fr;
+}
+
     /* —— Research: collapsible “Read more” cards —— */
 .research-summary {
   display: grid;
@@ -146,6 +152,11 @@
 
 /* Optional: give paragraphs inside collapsible a consistent rhythm */
 .research-more p { margin: 10px 0; }
+
+    #research-grid {
+  transition: grid-template-columns 0.25s ease;
+}
+
 
     /* —— Art gallery (thumbnails linking to full) —— */
    /* —— Art gallery (thumbnails linking to full) —— */
@@ -271,7 +282,7 @@
     <!-- —— RESEARCH —— -->
     <section id="research">
       <h2>Research</h2>
-      <div class="grid cols-2">
+      <div class="grid cols-2 research-grid" id="research-grid">
         <article class="card" style="padding:0">
           <img class="cover" src="assets/research/Cosmological_Models.jpg" alt="Illustration for inhomogeneous cosmological models">
          <div class="research-summary">
@@ -447,6 +458,17 @@
     // Initialize theme dropdown from saved value
     (function(){ try{ const saved = localStorage.getItem('theme')||'default'; const sel=document.querySelector('select[aria-label="Select color theme"]'); if(sel){ sel.value=saved; }}catch(e){} })();
   </script>
+
+  <script>
+  // Switch research layout to single column when reading
+  document.querySelectorAll('#research details.research-details').forEach(d => {
+    d.addEventListener('toggle', () => {
+      const grid = document.getElementById('research-grid');
+      const anyOpen = !!document.querySelector('#research details.research-details[open]');
+      grid.classList.toggle('reading', anyOpen);
+    });
+  });
+</script>
 
   <!-- Structured data -->
   <script type="application/ld+json">
