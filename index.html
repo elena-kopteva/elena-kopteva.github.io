@@ -467,5 +467,28 @@
     ]
   }
   </script>
+<script>
+  // Keep research cards in sync: open/close all when any is toggled
+  (function () {
+    const all = Array.from(document.querySelectorAll('#research details.research-details'));
+    if (all.length < 2) return;
+
+    let syncing = false;
+
+    all.forEach(d => {
+      d.addEventListener('toggle', () => {
+        if (syncing) return;
+        syncing = true;
+
+        const openNow = d.open;
+        all.forEach(other => {
+          if (other !== d) other.open = openNow;
+        });
+
+        syncing = false;
+      });
+    });
+  })();
+</script>
 </body>
 </html>
