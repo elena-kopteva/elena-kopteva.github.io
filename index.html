@@ -99,7 +99,54 @@
   text-align: justify;
   text-justify: inter-word;
 }
-    
+    /* —— Research: collapsible “Read more” cards —— */
+.research-summary {
+  display: grid;
+  gap: 8px;
+  padding: 22px;
+}
+
+.research-summary h3 { margin: 14px 0 8px; }
+.research-summary .muted { margin: 0; }
+
+.research-details {
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+/* Make summary look like your pill/button style but inside the card */
+.research-details > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--card) 95%, transparent);
+  user-select: none;
+}
+
+.research-details > summary::-webkit-details-marker { display: none; }
+
+.research-details > summary::after {
+  content: "Read more";
+  font-weight: 600;
+}
+
+.research-details[open] > summary::after {
+  content: "Read less";
+}
+
+/* Expanded content spacing */
+.research-more {
+  margin-top: 12px;
+}
+
+/* Optional: give paragraphs inside collapsible a consistent rhythm */
+.research-more p { margin: 10px 0; }
+
     /* —— Art gallery (thumbnails linking to full) —— */
    /* —— Art gallery (thumbnails linking to full) —— */
 .gallery {
@@ -227,59 +274,78 @@
       <div class="grid cols-2">
         <article class="card" style="padding:0">
           <img class="cover" src="assets/research/Cosmological_Models.jpg" alt="Illustration for inhomogeneous cosmological models">
-          <div style="padding:22px">
-            <h3>Inhomogeneous cosmological models</h3>
-            <p class="muted">Accelerated expansion from non‑standard fluid components and anisotropies.</p>
-          <p class="research-text">
-            The discovery that the universe is expanding at an <strong>accelerating rate</strong> &mdash;
-            a finding that led to the idea of <strong>dark energy</strong> &mdash;
-            remains one of the deepest mysteries in modern cosmology.
-          </p>
-          <p class="research-text">
-            Can the universe appear accelerated without dark energy, once we relax homogeneity and geodesic-flow assumptions?
-          </p>
-          <p class="research-text">
-            Together with my colleagues, I work to understand this question using <strong>Stephani-class cosmologies</strong> — smooth, 
-            non-rotating universes filled with a perfect fluid whose pressure changes from place to place. In these inhomogeneous 
-            models, the observed cosmological acceleration can be reproduced without the need for dark energy.
-          </p>
-          <p class="research-text">
-            In our work, we treat these models as <strong>diagnostic labs</strong> rather than literal global cosmologies. We develop results 
-            such as a closed-form redshift–magnitude relation, and we continue to test these models by comparing them with 
-            observations of supernovae, baryon acoustic oscillations, and structure growth, to see which versions remain 
-            consistent with the universe we observe.
-          </p>
-          </div>
+         <div class="research-summary">
+  <h3>Inhomogeneous cosmological models</h3>
+  <p class="muted">Accelerated expansion from non-standard fluid components and anisotropies.</p>
+
+  <!-- Teaser (always visible) -->
+  <p class="research-text">
+    Can the universe appear accelerated without dark energy, once we relax homogeneity and geodesic-flow assumptions?
+  </p>
+
+  <details class="research-details">
+    <summary aria-label="Toggle details for inhomogeneous cosmological models"></summary>
+
+    <div class="research-more">
+      <p class="research-text">
+        The discovery that the universe is expanding at an <strong>accelerating rate</strong> &mdash;
+        a finding that led to the idea of <strong>dark energy</strong> &mdash;
+        remains one of the deepest mysteries in modern cosmology.
+      </p>
+
+      <p class="research-text">
+        Together with my colleagues, I work to understand this question using <strong>Stephani-class cosmologies</strong> &mdash; smooth,
+        non-rotating universes filled with a perfect fluid whose pressure changes from place to place. In these inhomogeneous
+        models, the observed cosmological acceleration can be reproduced without the need for dark energy.
+      </p>
+
+      <p class="research-text">
+        In our work, we treat these models as <strong>diagnostic labs</strong> rather than literal global cosmologies. We develop results
+        such as a closed-form redshift&ndash;magnitude relation, and we continue to test these models by comparing them with
+        observations of supernovae, baryon acoustic oscillations, and structure growth, to see which versions remain
+        consistent with the universe we observe.
+      </p>
+    </div>
+  </details>
+</div>
+
         </article>
         <article class="card" style="padding:10">
           <img class="cover" src="assets/research/BH_Shadow.jpg" alt="Black holes embedded in evolving backgrounds">
-          <div style="padding:22px">
-            <h3>Black holes in evolving backgrounds</h3>
-            <p class="muted">Exact/approximate solutions for compact objects in non‑static cosmological media.</p>
-            <p class="research-text">
-              Real black holes live in non-empty space.<br>
-              They are surrounded by <strong>cosmic environments</strong> &mdash;
-              dark-energy&ndash;like fields, radiation, matter flows, and evolving
-              cosmological backgrounds &mdash; all of which can subtly shape what we
-              observe.
-          </p>
-          <p class="research-text">
-             My colleagues and I build and analyze
-             <strong>exact general-relativistic solutions</strong> that describe black
-             holes within these environments. We study two broad cases:<br>
-            (a) <strong>static, radially varying anisotropic media</strong>, such as
-            dark-energy&ndash;like fluids or networks of topological defects; and<br>
-            (b) <strong>time-dependent cosmological backgrounds</strong> modeled by dust, radiation, 
-            or both. To construct such models, we use generalized
-            Lema&icirc;tre&ndash;Tolman&ndash;Bondi (LTB) spacetimes.
-        </p>
-        <p class="research-text">
-          Within an <strong>effective-medium framework</strong>, we create
-          horizon maps and baseline models that serve
-          as starting points for adding cosmic structure, testing perturbations, and
-          linking analytical results with numerical simulations.
+          <div class="research-summary">
+  <h3>Black holes in evolving backgrounds</h3>
+  <p class="muted">Exact/approximate solutions for compact objects in non-static cosmological media.</p>
+
+  <!-- Teaser (always visible) -->
+  <p class="research-text">
+    Real black holes live in non-empty space, surrounded by cosmic environments that can subtly shape what we observe.
+  </p>
+
+  <details class="research-details">
+    <summary aria-label="Toggle details for black holes in evolving backgrounds"></summary>
+
+    <div class="research-more">
+      <p class="research-text">
+        They are surrounded by <strong>cosmic environments</strong> &mdash; dark-energy&ndash;like fields, radiation, matter flows, and evolving
+        cosmological backgrounds &mdash; all of which can subtly shape what we observe.
       </p>
-          </div>
+
+      <p class="research-text">
+        My colleagues and I build and analyze <strong>exact general-relativistic solutions</strong> that describe black holes within these environments.
+        We study two broad cases:
+        (a) <strong>static, radially varying anisotropic media</strong>, such as dark-energy&ndash;like fluids or networks of topological defects; and
+        (b) <strong>time-dependent cosmological backgrounds</strong> modeled by dust, radiation, or both. To construct such models, we use generalized
+        Lema&icirc;tre&ndash;Tolman&ndash;Bondi (LTB) spacetimes.
+      </p>
+
+      <p class="research-text">
+        Within an <strong>effective-medium framework</strong>, we create horizon maps and baseline models that serve as starting points for adding cosmic structure,
+        testing perturbations, and linking analytical results with numerical simulations.
+      </p>
+    </div>
+  </details>
+</div>
+
         </article>
       </div>
     </section>
