@@ -100,6 +100,36 @@
   text-justify: inter-word;
 }
 
+    /* —— Subtle animation for details content —— */
+.research-details .research-more {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 180ms ease, transform 220ms ease;
+  will-change: opacity, transform;
+}
+
+/* When open, fade/slide into place */
+.research-details[open] .research-more {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: make the button feel responsive */
+.research-details > summary {
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+.research-details > summary:active {
+  transform: translateY(1px);
+}
+
+    @media (prefers-reduced-motion: reduce) {
+  .research-details .research-more,
+  .research-details > summary {
+    transition: none;
+    transform: none;
+  }
+}
+    
     /* —— Research: collapsible “Read more” cards —— */
 .research-summary {
   display: grid;
