@@ -1,0 +1,705 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "_note": "Extended schema: standard JSON Resume + academic fields (talks, teaching, supervision, grants, memberships, books, service, outreach).",
+  "_lastUpdated": "2026-03-17",
+
+  "basics": {
+    "name": "Elena Kopteva",
+    "legalName": "Olena Koptieva",
+    "label": "Theoretical Physicist — General Relativity, Exact Solutions, Black Hole Physics",
+    "email": "koptieva@illinois.edu",
+    "phone": "+1 (217) 417-9219",
+    "url": "https://elena-kopteva.github.io",
+    "orcid": "https://orcid.org/0000-0001-8364-0481",
+    "summary": "Theoretical physicist specializing in exact solutions of Einstein's equations, black holes in evolving cosmological backgrounds, black hole perturbations, superradiance, and quasinormal modes. Teaching and research faculty at UIUC. Member, Witek Gravity Group; Member, ICASU; Associate Member, LISA Consortium.",
+    "location": {
+      "city": "Champaign-Urbana",
+      "region": "Illinois",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "ORCID",
+        "username": "0000-0001-8364-0481",
+        "url": "https://orcid.org/0000-0001-8364-0481"
+      },
+      {
+        "network": "GitHub",
+        "username": "elena-kopteva",
+        "url": "https://github.com/elena-kopteva"
+      }
+    ]
+  },
+
+  "work": [
+    {
+      "name": "University of Illinois Urbana-Champaign",
+      "position": "Visiting Research Specialist (Teaching & Research Faculty)",
+      "department": "Department of Physics, Grainger College of Engineering",
+      "url": "https://physics.illinois.edu",
+      "startDate": "2022-09-01",
+      "summary": "Research in general relativity and black hole physics. Teaching faculty for PHYS 225, 211, 212. Co-PI on NSF grant. First ISAR (Illinois Scholars at Risk) scholar.",
+      "highlights": [
+        "Course Director, PHYS 225 (Special Relativity & Mathematical Applications), 200+ students",
+        "Co-PI, NSF PHY Grant No. 2409726 (2024–present)",
+        "Member, Witek Gravity Group; Member, ICASU; Associate Member, LISA Consortium"
+      ]
+    },
+    {
+      "name": "Silesian University in Opava",
+      "position": "Visiting Professor",
+      "department": "Institute of Physics and Research Centre of Theoretical Physics and Astrophysics, Faculty of Philosophy and Science",
+      "startDate": "2019-08-01",
+      "endDate": "2022-08-01",
+      "summary": "Series of 3–5 month visits each year and remote collaboration.",
+      "highlights": [
+        "Research on inhomogeneous cosmological models and black hole solutions"
+      ]
+    },
+    {
+      "name": "Silesian University in Opava",
+      "position": "Assistant Professor",
+      "department": "Scientific Research Center of Theoretical Physics and Astrophysics, Faculty of Philosophy and Science",
+      "startDate": "2016-11-01",
+      "endDate": "2017-08-01"
+    },
+    {
+      "name": "Joint Institute for Nuclear Research",
+      "position": "Visiting Professor",
+      "department": "Bogoliubov Laboratory of Theoretical Physics",
+      "location": "Dubna, Russia",
+      "startDate": "2015-05-01",
+      "endDate": "2016-06-01"
+    },
+    {
+      "name": "Dnipropetrovsk National University (DNU)",
+      "position": "Associate Professor",
+      "department": "Theoretical Physics Department",
+      "location": "Dnipro, Ukraine",
+      "startDate": "2006-12-01",
+      "endDate": "2015-07-01",
+      "highlights": [
+        "Teaching General Physics, Gravitation and Cosmology, Nonlinear Dynamics",
+        "Supervised multiple Master's and undergraduate students"
+      ]
+    },
+    {
+      "name": "National Mining University",
+      "position": "Teaching Assistant",
+      "department": "Physics Department",
+      "location": "Dnipro, Ukraine",
+      "startDate": "2003-12-01",
+      "endDate": "2006-12-01"
+    },
+    {
+      "name": "Center of Technology Commercialization",
+      "position": "Patent Expert",
+      "location": "Dnipro, Ukraine",
+      "startDate": "2001-09-01",
+      "endDate": "2003-12-01"
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Dnipropetrovsk National University (DNU)",
+      "area": "Theoretical Physics (Physical and Mathematical Sciences)",
+      "studyType": "PhD",
+      "startDate": "2000-11-01",
+      "endDate": "2006-01-01",
+      "thesis": "Cosmological and astrophysical models with cosmological constant",
+      "supervisor": "Prof. Maria Korkina"
+    },
+    {
+      "institution": "Dnipropetrovsk National University (DNU)",
+      "area": "Theoretical Physics",
+      "studyType": "Undergraduate Diploma (BSc+MSc equivalent), with honors",
+      "startDate": "1995-01-01",
+      "endDate": "2000-01-01"
+    }
+  ],
+
+  "grants": [
+    {
+      "title": "Black Hole Probes of Beyond-Standard Model Particles and Fields",
+      "funder": "National Science Foundation",
+      "grantNumber": "NSF PHY 2409726",
+      "role": "Co-PI",
+      "amount": "$240,000",
+      "startDate": "2024-08-15"
+    },
+    {
+      "title": "Visiting International Fellowship in Physical Sciences",
+      "funder": "Silesian University in Opava",
+      "role": "Fellow",
+      "startDate": "2016-01-01",
+      "endDate": "2017-01-01"
+    },
+    {
+      "title": "National Academy of Sciences of Ukraine program 'Cosmomicrophysics'",
+      "funder": "National Academy of Sciences of Ukraine",
+      "role": "Member",
+      "startDate": "2007-01-01",
+      "endDate": "2013-01-01"
+    }
+  ],
+
+  "memberships": [
+    {
+      "organization": "LISA Consortium",
+      "role": "Associate Member",
+      "startDate": "2023-01-01"
+    },
+    {
+      "organization": "Illinois Center for Advanced Studies of the Universe (ICASU), UIUC",
+      "role": "Member",
+      "startDate": "2023-01-01"
+    },
+    {
+      "organization": "American Physical Society (APS), DGRAV Division",
+      "role": "Member",
+      "startDate": "2024-01-01"
+    },
+    {
+      "organization": "Scholars at Risk (SAR) Network",
+      "role": "Member",
+      "startDate": "2023-01-01"
+    },
+    {
+      "organization": "Witek Gravity Group, UIUC",
+      "role": "Member",
+      "startDate": "2022-09-01"
+    }
+  ],
+
+  "researchTopics": [
+    "General relativity",
+    "Exact solutions of Einstein's equations",
+    "Black holes in evolving cosmological backgrounds",
+    "Black hole perturbations",
+    "Superradiance in generalized spacetimes",
+    "Quasinormal modes",
+    "Kiselev spacetimes",
+    "Stephani cosmologies",
+    "Isotropic coordinate methods",
+    "Inhomogeneous cosmological models"
+  ],
+
+  "publications": [
+    {
+      "name": "Virial theorem for a cloud of stars obtained from the Jeans equations with second correlation moments",
+      "authors": ["A. Stupka", "E. Kopteva", "M. Saliuk", "I. Bormotova"],
+      "publisher": "European Physical Journal C",
+      "releaseDate": "2023",
+      "volume": "83",
+      "issue": "7",
+      "pages": "598",
+      "url": "https://arxiv.org/abs/2208.07695",
+      "arxiv": "2208.07695"
+    },
+    {
+      "name": "Geodesic Structure of the Accelerated Stephani Universe",
+      "authors": ["I. Bormotova", "E. Kopteva", "Z. Stuchlik"],
+      "publisher": "Symmetry",
+      "releaseDate": "2021",
+      "volume": "13",
+      "issue": "6",
+      "pages": "1001",
+      "url": "https://arxiv.org/abs/2103.08999",
+      "arxiv": "2103.08999"
+    },
+    {
+      "name": "Accelerated expansion of the universe from the perspective of inhomogeneous cosmology",
+      "authors": ["I. Bormotova", "E. Kopteva", "M. Churilova", "Z. Stuchlik"],
+      "publisher": "International Journal of Modern Physics A",
+      "releaseDate": "2020",
+      "url": "https://arxiv.org/abs/2002.00454",
+      "arxiv": "2002.00454"
+    },
+    {
+      "name": "Accelerated Expansion of the Universe in the Model with Non-Uniform Pressure",
+      "authors": ["E. Kopteva", "I. Bormotova", "M. Churilova", "Z. Stuchlik"],
+      "publisher": "Astrophysical Journal",
+      "releaseDate": "2019",
+      "volume": "887",
+      "pages": "98",
+      "url": "https://arxiv.org/abs/2001.07382",
+      "arxiv": "2001.07382"
+    },
+    {
+      "name": "Exact Solution for a Black Hole Embedded in a Nonstatic Dust-filled Universe",
+      "authors": ["E. Kopteva", "P. Jaluvkova", "I. Bormotova", "Z. Stuchlik"],
+      "publisher": "Astrophysical Journal",
+      "releaseDate": "2018",
+      "volume": "866",
+      "pages": "98",
+      "url": "https://arxiv.org/abs/1810.08613",
+      "arxiv": "1810.08613"
+    },
+    {
+      "name": "The model of the black hole enclosed in dust: the flat space case",
+      "authors": ["P. Jaluvkova", "E. Kopteva", "Z. Stuchlik"],
+      "publisher": "General Relativity and Gravitation",
+      "releaseDate": "2017",
+      "volume": "49",
+      "pages": "80",
+      "url": "https://arxiv.org/abs/1602.01266",
+      "arxiv": "1602.01266"
+    },
+    {
+      "name": "Stefani cosmological models with accelerated expansion",
+      "authors": ["M. Korkina", "O. Iegurnov", "E. Kopteva"],
+      "publisher": "Russian Physics Journal",
+      "releaseDate": "2016",
+      "volume": "59",
+      "issue": "3",
+      "pages": "328–334"
+    },
+    {
+      "name": "The generalization of the Tolman-Bondi solution",
+      "authors": ["M. Korkina", "E. Kopteva"],
+      "publisher": "Astronomical School's Report",
+      "releaseDate": "2012",
+      "volume": "8",
+      "pages": "31–33",
+      "url": "https://arxiv.org/abs/1604.08247",
+      "arxiv": "1604.08247"
+    },
+    {
+      "name": "The mass function method for obtaining exact solutions in General Relativity",
+      "authors": ["M. Korkina", "E. Kopteva"],
+      "publisher": "Space, Time and Fundamental Interactions",
+      "releaseDate": "2012",
+      "volume": "1",
+      "pages": "38–47",
+      "url": "https://arxiv.org/abs/1604.08247",
+      "arxiv": "1604.08247"
+    },
+    {
+      "name": "T-Models and Kantowski-Sachs Models",
+      "authors": ["M. Korkina", "E. Kopteva", "W. Kazemir"],
+      "publisher": "Ukrainian Physics Journal",
+      "releaseDate": "2008",
+      "volume": "53",
+      "issue": "2",
+      "pages": "107–111"
+    },
+    {
+      "name": "The Friedman Models with the Pressure and the Cosmological Constant",
+      "authors": ["M. Korkina", "E. Kopteva", "O. Orlyansky"],
+      "publisher": "Ukrainian Physics Journal",
+      "releaseDate": "2005",
+      "volume": "50",
+      "issue": "1",
+      "pages": "11–15"
+    },
+    {
+      "name": "The Homogeneous and Isotropic Universe with Domain Walls",
+      "authors": ["E. Kopteva"],
+      "publisher": "Bulletin of Dnipropetrovsk National University, Physics and Radioelectronics",
+      "releaseDate": "2004",
+      "volume": "12",
+      "pages": "161–163"
+    }
+  ],
+
+  "talks": [
+    {
+      "title": "Jeans equations with account of gravitational field correlations",
+      "event": "Institute of Physics Seminar",
+      "venue": "Silesian University in Opava",
+      "location": "Czech Republic",
+      "date": "2022-01-01",
+      "type": "invited"
+    },
+    {
+      "title": "Generalized LTB solution with nonzero pressure in modeling of cosmological black holes",
+      "event": "Institute of Physics Seminar",
+      "venue": "Silesian University in Opava",
+      "location": "Czech Republic",
+      "date": "2022-01-01",
+      "type": "invited"
+    },
+    {
+      "title": "Luminosity distance within inhomogeneous cosmological models",
+      "event": "Institute of Physics Seminar",
+      "venue": "Silesian University in Opava",
+      "location": "Czech Republic",
+      "date": "2021-01-01",
+      "type": "invited"
+    },
+    {
+      "title": "Particle and photon trajectories near a black hole immersed in dust",
+      "event": "Seminar in Modern Mathematical Physics",
+      "venue": "BLTP, JINR",
+      "location": "Dubna, Russia",
+      "date": "2016-01-01",
+      "type": "invited"
+    },
+    {
+      "title": "Variable spatial curvature and accelerated cosmological expansion",
+      "event": "Seminar in Modern Mathematical Physics",
+      "venue": "BLTP, JINR",
+      "location": "Dubna, Russia",
+      "date": "2015-01-01",
+      "type": "invited"
+    },
+    {
+      "title": "The motion of the neutral particle with orbital momentum near extremely charged black hole",
+      "event": "Seminar",
+      "venue": "Bogolyubov Institute for Theoretical Physics",
+      "location": "Kyiv, Ukraine",
+      "date": "2010-01-01",
+      "type": "invited"
+    },
+    {
+      "title": "Quasi-classical neutral particle in extremely charged black hole field",
+      "event": "Summer School in Cosmology",
+      "venue": "ICTP",
+      "location": "Trieste, Italy",
+      "date": "2010-01-01",
+      "type": "invited"
+    },
+    {
+      "title": "Influence of the cosmological constant on the dynamics of a shear-free ideal liquid sphere",
+      "event": "Astro Space Centre Seminar",
+      "venue": "Lebedev Physical Institute",
+      "location": "Moscow, Russia",
+      "date": "2010-01-01",
+      "type": "invited"
+    }
+  ],
+
+  "teaching": [
+    {
+      "course": "PHYS 225 — Special Relativity & Mathematical Applications",
+      "institution": "UIUC",
+      "role": "Course Director, Main Lecturer",
+      "terms": [
+        {"term": "Fall 2023", "enrollment": 119},
+        {"term": "Fall 2024", "enrollment": 140},
+        {"term": "Spring 2025", "enrollment": 200, "note": "in person + online"},
+        {"term": "Fall 2025", "enrollment": 140},
+        {"term": "Spring 2026", "enrollment": 200}
+      ]
+    },
+    {
+      "course": "PHYS 212 — Electricity & Magnetism",
+      "institution": "UIUC",
+      "role": "Course Instructor, Second Lecturer",
+      "terms": [
+        {"term": "Spring 2024", "enrollment": 150}
+      ]
+    },
+    {
+      "course": "PHYS 211 — Classical Mechanics",
+      "institution": "UIUC",
+      "role": "Discussion Coordinator; Discussion TA",
+      "terms": [
+        {"term": "Spring 2023", "enrollment": 1200, "note": "Coordinated 25 TAs"}
+      ]
+    },
+    {
+      "course": "PHYS 497 — Individual Study (Undergraduate)",
+      "institution": "UIUC",
+      "role": "Instructor"
+    },
+    {
+      "course": "General Physics",
+      "institution": "Dnipropetrovsk National University",
+      "role": "Course Director (Physics majors); Discussion Instructor (Mathematics majors)",
+      "terms": [
+        {"term": "2013–2014", "enrollment": 100}
+      ]
+    },
+    {
+      "course": "Gravitation and Cosmology",
+      "institution": "Dnipropetrovsk National University",
+      "role": "Discussion TA",
+      "terms": [{"term": "2010–2014"}]
+    },
+    {
+      "course": "Physical Principles of IT & CS",
+      "institution": "Dnipropetrovsk National University",
+      "role": "Course Director, Main Lecturer",
+      "terms": [{"term": "2013", "enrollment": 40}]
+    },
+    {
+      "course": "Fundamentals of Physics & CS",
+      "institution": "Dnipropetrovsk National University",
+      "role": "Course Director, Main Lecturer",
+      "terms": [{"term": "2012", "enrollment": 45}]
+    },
+    {
+      "course": "Nuclear & Atomic Physics (lab practicum)",
+      "institution": "Dnipropetrovsk National University",
+      "role": "Lab Instructor",
+      "terms": [{"term": "2009–2014", "enrollment": 100}]
+    },
+    {
+      "course": "Nonlinear Dynamics (lab)",
+      "institution": "Dnipropetrovsk National University",
+      "role": "Lab Instructor",
+      "terms": [{"term": "2007–2009", "enrollment": 20}]
+    }
+  ],
+
+  "supervision": {
+    "phd": [
+      {
+        "name": "D. Garzon",
+        "institution": "UIUC",
+        "topic": "Superradiance in cosmological spacetimes",
+        "startDate": "2023",
+        "role": "Co-supervisor",
+        "awards": [
+          "2025 ICASU Graduate Fellowship",
+          "AAUW Fellowship (2024–2025)",
+          "Mavis Future Faculty Fellowship (2024)"
+        ]
+      },
+      {
+        "name": "I. Bormotova",
+        "institution": "Silesian University in Opava",
+        "topic": "New inhomogeneous spherically symmetric solutions of the Einstein equations and their implications for cosmological and astrophysical problems",
+        "startDate": "2017",
+        "role": "Supervisor",
+        "note": "Collaboration with IEAP, Czech Technical University in Prague"
+      },
+      {
+        "name": "P. Jaluvkova",
+        "institution": "Silesian University in Opava",
+        "topic": "Black holes in the cosmological background",
+        "startDate": "2015",
+        "endDate": "2018",
+        "role": "Supervisor"
+      }
+    ],
+    "undergraduate": [
+      {
+        "name": "Z. Zeng",
+        "institution": "UIUC",
+        "topic": "Derivation of a conformally flat metric for a generalized Schwarzschild-like solution",
+        "period": "Spring–Fall 2025",
+        "role": "Supervisor",
+        "awards": ["Ralph O. Simmons Undergraduate Research Scholarship (Spring 2025)"]
+      },
+      {
+        "name": "Yi Zhang",
+        "institution": "UIUC",
+        "topics": [
+          "Horizon structure of the spacetime of the charged black hole surrounded by domain walls (Spring 2024)",
+          "Quasinormal modes for charged scalar scattering off a charged black hole surrounded by domain walls (Summer–Fall 2024)"
+        ],
+        "role": "Supervisor",
+        "outcome": "Accepted into UIUC Physics PhD program (Spring 2025)"
+      },
+      {
+        "name": "S. Gupta",
+        "institution": "UIUC",
+        "topic": "Shadows of cosmological black holes I & II",
+        "period": "Summer 2023; Summer 2024",
+        "role": "Supervisor",
+        "awards": ["2023 Lorella M. Jones Summer Research Award"]
+      }
+    ],
+    "highSchool": [
+      {
+        "students": ["SriRitvik Yellamilli", "Maddie Smith"],
+        "program": "WYSE Summer of STEMM Young Scholars Research Program, Grainger College of Engineering & Carle-Illinois College of Medicine",
+        "topic": "Visualizing Spacetime: Supercomputer Simulations of Black Hole Coalescence",
+        "period": "Summer 2025",
+        "role": "Mentor"
+      },
+      {
+        "students": ["Jyotsna Velu", "Xavier Kader"],
+        "program": "WYSE Summer of STEMM Young Scholars Research Program",
+        "topic": "Colliding Black Holes on Supercomputers",
+        "period": "Summer 2024",
+        "role": "Mentor"
+      }
+    ]
+  },
+
+  "service": [
+    {
+      "role": "Co-organizer",
+      "organization": "Astrophysics, Gravitation, and Cosmology Seminar, Department of Physics, UIUC",
+      "startDate": "2024",
+      "endDate": "2026"
+    },
+    {
+      "role": "Co-organizer and Chair",
+      "organization": "Interdisciplinary Seminar for Natural Sciences, DNU, Dnipro, Ukraine",
+      "startDate": "2006",
+      "endDate": "2008"
+    },
+    {
+      "role": "Co-organizer",
+      "organization": "Seminar on Theoretical Physics, National Mining University, Dnipro, Ukraine",
+      "startDate": "2003",
+      "endDate": "2006"
+    }
+  ],
+
+  "outreach": [
+    {
+      "title": "Invited Lecture: Baryogenesis",
+      "event": "PHYS 403, UIUC",
+      "date": "2025-07-01",
+      "type": "invited lecture"
+    },
+    {
+      "title": "Invited Talk: The Human Side of Physics",
+      "event": "Society of Physics Students Speaker Series, UIUC",
+      "date": "2025-04-01",
+      "type": "public talk"
+    },
+    {
+      "title": "Invited Lecture: Carrying Two Realities",
+      "event": "OLLI, UIUC",
+      "date": "2025-03-01",
+      "type": "public lecture"
+    },
+    {
+      "title": "Invited Talk: My Family and War",
+      "event": "Illinois Club Cosmopolitan Group",
+      "date": "2024-12-01",
+      "type": "public talk"
+    },
+    {
+      "title": "Invited Lecture: Gravitational Waves",
+      "event": "PHYS 403, UIUC",
+      "date": "2024-07-01",
+      "type": "invited lecture"
+    },
+    {
+      "title": "Invited Lecture: Cosmic Strings, Domain Walls and the Cosmological Vacuum",
+      "event": "PHYS 403, UIUC",
+      "date": "2024-03-01",
+      "type": "invited lecture"
+    },
+    {
+      "title": "Invited Lecture: Cosmology",
+      "event": "PHYS 403, UIUC",
+      "date": "2023-09-01",
+      "type": "invited lecture"
+    },
+    {
+      "title": "Invited Lecture: Accelerated Expansion of the Universe",
+      "event": "PHYS 403, UIUC",
+      "date": "2023-06-01",
+      "type": "invited lecture"
+    },
+    {
+      "title": "Invited Talk: Family and War",
+      "event": "Illinois Global Institute Speaker Series",
+      "date": "2023-01-01",
+      "type": "public talk"
+    },
+    {
+      "title": "Mentor, WYSE Young Scholars Research Program",
+      "event": "Colliding Black Holes on Supercomputers",
+      "date": "2024-06-01",
+      "type": "mentorship"
+    },
+    {
+      "title": "Mentor, WYSE Young Scholars Research Program",
+      "event": "Visualizing Spacetime: Supercomputer Simulations of Black Hole Coalescence",
+      "date": "2025-06-01",
+      "type": "mentorship"
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "Computer Algebra & Typesetting",
+      "keywords": ["Mathematica", "LaTeX"]
+    },
+    {
+      "name": "Programming",
+      "level": "Working knowledge",
+      "keywords": ["Python", "Numerical analysis", "Scientific visualization"]
+    },
+    {
+      "name": "Machine Learning (training)",
+      "level": "Trained",
+      "keywords": ["AutoEncoders", "VAEs", "GANs", "CycleGANs", "Diffusion Models", "PyTorch"],
+      "note": "AI Training Seminar Series, Center for AI Innovation, NCSA-UIUC, Fall 2025. Electronic badge awarded."
+    },
+    {
+      "name": "Legacy / prior exposure",
+      "keywords": ["Pascal", "BASIC", "VB.NET"]
+    }
+  ],
+
+  "languages": [
+    {"language": "Ukrainian", "fluency": "Native"},
+    {"language": "Russian", "fluency": "Native"},
+    {"language": "English", "fluency": "Fluent"},
+    {"language": "Czech", "fluency": "Advanced"}
+  ],
+
+  "books": [
+    {
+      "title": "All Ways (Vse dorogi)",
+      "language": "Russian",
+      "publisher": "Moscow",
+      "releaseDate": "2016",
+      "pages": 408,
+      "type": "poetry"
+    },
+    {
+      "title": "White Beasts (Belye zveri)",
+      "language": "Russian",
+      "publisher": "Dnipropetrovsk University Press",
+      "releaseDate": "2002",
+      "pages": 27,
+      "isbn": "966-551-100-9",
+      "type": "poetry"
+    },
+    {
+      "title": "Tales",
+      "language": "Russian",
+      "publisher": "Miniature Poetry Library 'Chetverg', St. Petersburg",
+      "releaseDate": "2000",
+      "pages": 16,
+      "type": "poetry"
+    },
+    {
+      "title": "The Mass Function Method",
+      "subtitle": "Workbook for cosmology",
+      "authors": ["M.P. Korkina", "E.M. Kopteva"],
+      "publisher": "Dnipropetrovsk National University Press",
+      "releaseDate": "2012",
+      "type": "textbook"
+    },
+    {
+      "title": "Studying the Magnetoelasticity Effect",
+      "subtitle": "Workbook for general physics course, solid state physics section",
+      "authors": ["E.M. Kopteva", "Ye.A. Yakunin", "A.V. Chernay"],
+      "publisher": "National Mining University Press",
+      "releaseDate": "2005",
+      "type": "lab manual"
+    },
+    {
+      "title": "Studying the temperature dependence of resistance of the semiconductor and finding its forbidden band",
+      "subtitle": "Workbook for general physics course, solid state physics section",
+      "authors": ["E.M. Kopteva", "Ye.A. Yakunin", "A.V. Chernay", "A.V. Podlyatskaya"],
+      "publisher": "National Mining University Press",
+      "releaseDate": "2005",
+      "type": "lab manual"
+    }
+  ],
+
+  "interests": [
+    {
+      "name": "Visual arts",
+      "keywords": ["Painting (formal training)", "Scientific illustration", "Visual design"]
+    },
+    {
+      "name": "Literature and poetry",
+      "keywords": ["Three published poetry books"]
+    }
+  ]
+}
