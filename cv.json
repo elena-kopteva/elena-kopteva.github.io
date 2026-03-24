@@ -192,6 +192,15 @@
 
   "publications": [
     {
+     "name": "Isotropic Coordinates for Generalized Schwarzschild-like Solutions",
+     "authors": ["Z. Zeng", "E. Kopteva"],
+     "publisher": "arXiv preprint",
+     "releaseDate": "2025",
+     "url": "https://arxiv.org/abs/2506.19705",
+     "arxiv": "2506.19705",
+     "inspire": "3132821"
+    },
+    {
       "name": "Virial theorem for a cloud of stars obtained from the Jeans equations with second correlation moments",
       "authors": ["A. Stupka", "E. Kopteva", "M. Saliuk", "I. Bormotova"],
       "publisher": "European Physical Journal C",
