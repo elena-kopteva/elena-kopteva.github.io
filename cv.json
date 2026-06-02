@@ -183,22 +183,35 @@
     "Black holes in evolving cosmological backgrounds",
     "Black hole perturbations",
     "Superradiance in generalized spacetimes",
-    "Quasinormal modes",
     "Kiselev spacetimes",
     "Stephani cosmologies",
-    "Isotropic coordinate methods",
     "Inhomogeneous cosmological models"
-  ],
+    "Rater-state bias in RLHF preference data",
+    "Emergent structures in multi-agent AI systems",
+    "Affective and relational AI"
+    ],
 
   "publications": [
     {
-     "name": "Isotropic Coordinates for Generalized Schwarzschild-like Solutions",
-     "authors": ["Z. Zeng", "E. Kopteva"],
-     "publisher": "arXiv preprint",
-     "releaseDate": "2026",
-     "url": "https://arxiv.org/abs/2506.19705",
-     "arxiv": "2506.19705",
-     "inspire": "3132821"
+      "name": "Rater State Bias in RLHF Preference Data: An Audit Framework",
+      "authors": ["E. Kopteva", "V. Hlynianyi-Zhuk"],
+      "publisher": "Zenodo",
+      "releaseDate": "2026",
+      "url": "https://doi.org/10.5281/zenodo.20499998",
+      "doi": "10.5281/zenodo.20499998"
+    },
+    {
+      "name": "Isotropic Coordinates for Generalized Schwarzschild-like Solutions",
+      "authors": ["Z. Zeng", "E. Kopteva"],
+      "publisher": "Journal of Mathematical Physics",
+      "releaseDate": "2026-06-01",
+      "url": "https://doi.org/10.1063/5.0335825",
+      "doi": "10.1063/5.0335825",
+      "volume": "67",
+      "issue": "6",
+      "pages": "062501",
+      "arxiv": "2506.19705",
+      "inspire": "3132821"
     },
     {
       "name": "Virial theorem for a cloud of stars obtained from the Jeans equations with second correlation moments",
