@@ -188,7 +188,6 @@
     "Inhomogeneous cosmological models",
     "Correlated rater state bias in RLHF preference data",
     "Emergent structures in multi-agent AI systems",
-    "Human-AI interaction and affective AI"
     ],
 
   "publications": [
@@ -204,13 +203,13 @@
       "name": "Isotropic Coordinates for Generalized Schwarzschild-like Solutions",
       "authors": ["Z. Zeng", "E. Kopteva"],
       "publisher": "Journal of Mathematical Physics",
-      "releaseDate": "2026-06-01",
+      "releaseDate": "2026",
       "url": "https://doi.org/10.1063/5.0335825",
       "doi": "10.1063/5.0335825",
+      "journal": "J. Math. Phys.",
       "volume": "67",
-      "issue": "6",
       "pages": "062501",
-      "arxiv": "2506.19705",
+      "arxiv": "2603.21040",
       "inspire": "3132821"
     },
     {
