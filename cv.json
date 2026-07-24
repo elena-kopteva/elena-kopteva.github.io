@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
-  "_note": "Extended schema: standard JSON Resume + academic fields (talks, teaching, supervision, grants, memberships, books, service, outreach).",
+  "_note": "Extended schema: standard JSON Resume + academic fields (talks, teaching, supervision, grants, memberships, books, service, outreach, researchOutputs).",
   "_lastUpdated": "2026-07-24",
 
   "basics": {
@@ -13,7 +13,7 @@
     "orcid": "https://orcid.org/0000-0001-8364-0481",
     "summary": "Theoretical physicist specializing in exact solutions of Einstein's equations, black holes in evolving cosmological backgrounds, black hole perturbations, superradiance, and quasinormal modes. Teaching and research faculty at UIUC. Member, Witek Gravity Group; Member, ICASU; Associate Member, LISA Consortium.",
     "location": {
-      "city": "Champaign-Urbana",
+      "city": "Urbana-Champaign",
       "region": "Illinois",
       "countryCode": "US"
     },
@@ -39,7 +39,7 @@
   "work": [
     {
       "name": "University of Illinois Urbana-Champaign",
-      "position": "Visiting Research Scientist (Teaching & Research Faculty)",
+      "position": "Visiting Research Scientist (Teaching and Research Faculty)",
       "department": "Department of Physics, Grainger College of Engineering",
       "url": "https://physics.illinois.edu",
       "startDate": "2022-09-01",
@@ -188,9 +188,9 @@
     "Stephani cosmologies",
     "Isotropic coordinate methods",
     "Inhomogeneous cosmological models",
-    "Reinforcement learning",
-    "RLHF / preference-data bias auditing",
-    "Multi-agent and autonomous-agent systems"
+    "AI evaluation and agent systems",
+    "Bias in RLHF preference data",
+    "Semantic dynamics in multi-agent and autonomous agent systems"
   ],
 
   "publications": [
@@ -341,6 +341,18 @@
     }
   ],
 
+  "researchOutputs": [
+    {
+      "name": "Kopterix: A Low-Footprint Instrument for Observing Agent-Native Populations, with a Two-Month Validation on Moltbook",
+      "authors": ["E. Kopteva"],
+      "publisher": "Zenodo",
+      "releaseDate": "2026",
+      "type": "Validation report and supporting research archive",
+      "url": "https://doi.org/10.5281/zenodo.21514979",
+      "doi": "10.5281/zenodo.21514979"
+    }
+  ],
+
   "talks": [
     {
       "title": "Approaching Dirty Black Holes",
@@ -465,19 +477,19 @@
       "terms": [{"term": "2010–2014"}]
     },
     {
-      "course": "Physical Principles of IT & CS",
+      "course": "Physical Principles of IT and CS",
       "institution": "Dnipropetrovsk National University",
       "role": "Course Director, Main Lecturer",
       "terms": [{"term": "2013", "enrollment": 40}]
     },
     {
-      "course": "Fundamentals of Physics & CS",
+      "course": "Fundamentals of Physics and CS",
       "institution": "Dnipropetrovsk National University",
       "role": "Course Director, Main Lecturer",
       "terms": [{"term": "2012", "enrollment": 45}]
     },
     {
-      "course": "Nuclear & Atomic Physics (lab practicum)",
+      "course": "Nuclear and Atomic Physics (lab practicum)",
       "institution": "Dnipropetrovsk National University",
       "role": "Lab Instructor",
       "terms": [{"term": "2009–2014", "enrollment": 100}]
@@ -550,7 +562,7 @@
       {
         "name": "S. Gupta",
         "institution": "UIUC",
-        "topic": "Shadows of cosmological black holes I & II",
+        "topic": "Shadows of cosmological black holes I and II",
         "period": "Summer 2023; Summer 2024",
         "role": "Supervisor",
         "awards": ["2023 Lorella M. Jones Summer Research Award"]
@@ -559,7 +571,7 @@
     "highSchool": [
       {
         "students": ["SriRitvik Yellamilli", "Maddie Smith"],
-        "program": "WYSE Summer of STEMM Young Scholars Research Program, Grainger College of Engineering & Carle-Illinois College of Medicine",
+        "program": "WYSE Summer of STEMM Young Scholars Research Program, Grainger College of Engineering and Carle-Illinois College of Medicine",
         "topic": "Visualizing Spacetime: Supercomputer Simulations of Black Hole Coalescence",
         "period": "Summer 2025",
         "role": "Mentor"
@@ -583,7 +595,7 @@
     },
     {
       "role": "Co-organizer",
-      "organization": "Astrophysics, Gravitation, and Cosmology Seminar, Department of Physics, UIUC",
+      "organization": "Astrophysics, Relativity, and Cosmology Seminar, Department of Physics, UIUC",
       "startDate": "2024",
       "endDate": "2026"
     },
