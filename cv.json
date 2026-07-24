@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "_note": "Extended schema: standard JSON Resume + academic fields (talks, teaching, supervision, grants, memberships, books, service, outreach).",
-  "_lastUpdated": "2026-03-17",
+  "_lastUpdated": "2026-07-24",
 
   "basics": {
     "name": "Elena Kopteva",
@@ -183,33 +183,45 @@
     "Black holes in evolving cosmological backgrounds",
     "Black hole perturbations",
     "Superradiance in generalized spacetimes",
+    "Quasinormal modes",
     "Kiselev spacetimes",
     "Stephani cosmologies",
+    "Isotropic coordinate methods",
     "Inhomogeneous cosmological models",
-    "Correlated rater state bias in RLHF preference data",
-    "Emergent structures in multi-agent AI systems",
-    ],
+    "Reinforcement learning",
+    "RLHF / preference-data bias auditing",
+    "Multi-agent and autonomous-agent systems"
+  ],
 
   "publications": [
     {
+      "name": "Charged black holes embedded in matter with anisotropic pressure: Horizon Structure and Quasinormal Mode Spectra",
+      "authors": ["D. N. Garzon", "Jiayi Zhang", "E. Kopteva", "H. Witek"],
+      "publisher": "arXiv preprint",
+      "releaseDate": "2026",
+      "url": "https://arxiv.org/abs/2607.05550",
+      "arxiv": "2607.05550",
+      "inspire": "3178081"
+    },
+    {
       "name": "Rater State Bias in RLHF Preference Data: An Audit Framework",
       "authors": ["E. Kopteva", "V. Hlynianyi-Zhuk"],
-      "publisher": "Zenodo",
+      "publisher": "arXiv preprint",
       "releaseDate": "2026",
-      "url": "https://doi.org/10.5281/zenodo.20499998",
-      "doi": "10.5281/zenodo.20499998"
+      "url": "https://arxiv.org/abs/2607.16195",
+      "arxiv": "2607.16195"
     },
     {
       "name": "Isotropic Coordinates for Generalized Schwarzschild-like Solutions",
       "authors": ["Z. Zeng", "E. Kopteva"],
       "publisher": "Journal of Mathematical Physics",
       "releaseDate": "2026",
-      "url": "https://doi.org/10.1063/5.0335825",
-      "doi": "10.1063/5.0335825",
-      "journal": "J. Math. Phys.",
       "volume": "67",
+      "issue": "6",
       "pages": "062501",
+      "url": "https://arxiv.org/abs/2603.21040",
       "arxiv": "2603.21040",
+      "doi": "10.1063/5.0335825",
       "inspire": "3132821"
     },
     {
@@ -330,6 +342,14 @@
   ],
 
   "talks": [
+    {
+      "title": "Approaching Dirty Black Holes",
+      "event": "Astrophysics, Relativity, and Cosmology Seminar",
+      "venue": "ICASU, UIUC Physics",
+      "location": "Urbana-Champaign, IL, USA",
+      "date": "2026-04-01",
+      "type": "invited"
+    },
     {
       "title": "Jeans equations with account of gravitational field correlations",
       "event": "Institute of Physics Seminar",
@@ -503,6 +523,13 @@
     ],
     "undergraduate": [
       {
+        "name": "K. Roberts",
+        "institution": "UIUC",
+        "topic": "Shadow of the One-Component Uncharged Kiselev Black Hole",
+        "period": "Summer 2026",
+        "role": "Supervisor"
+      },
+      {
         "name": "Z. Zeng",
         "institution": "UIUC",
         "topic": "Derivation of a conformally flat metric for a generalized Schwarzschild-like solution",
@@ -548,6 +575,12 @@
   },
 
   "service": [
+    {
+      "role": "Lead Developer",
+      "organization": "Course Proposal for PHYS 226: Mathematical Methods for Physics, Department of Physics, UIUC",
+      "startDate": "2025",
+      "endDate": "2026"
+    },
     {
       "role": "Co-organizer",
       "organization": "Astrophysics, Gravitation, and Cosmology Seminar, Department of Physics, UIUC",
