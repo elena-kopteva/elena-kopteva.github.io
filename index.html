@@ -178,6 +178,15 @@
 /* Optional: give paragraphs inside collapsible a consistent rhythm */
 .research-more p { margin: 10px 0; }
 
+/* —— Research: wide card spanning both columns —— */
+.research-wide { margin-top: 18px; }   /* same as .grid gap */
+.research-wide .cover {
+  max-width: 100%;      /* wide image must not overflow on phones */
+  max-height: 220px;
+  height: auto;
+}
+.research-more .research-subhead { margin-top: 22px; }
+
    /* —— Art gallery (thumbnails linking to full) —— */
 .gallery {
   display: grid;
@@ -386,6 +395,55 @@
 
         </article>
       </div>
+
+      <!-- Wide card: AI research (collapses independently of the two cards above) -->
+      <article class="card research-wide" style="padding:0">
+        <img class="cover" src="assets/research/attractor.jpg" alt="Illustration of a strange attractor for multi-agent systems and RLHF">
+        <div class="research-summary">
+          <h3>Multi-agent systems and RLHF</h3>
+          <p class="muted">Semantic dynamics in autonomous agent populations</p>
+
+          <!-- Teaser (always visible) -->
+          <p class="research-text">
+            When autonomous agents share an environment, communicate, and adapt, collective patterns emerge and keep evolving as interaction continues.
+          </p>
+
+          <details class="research-details">
+            <summary aria-label="Toggle details for multi-agent systems and RLHF"></summary>
+
+            <div class="research-more">
+              <p class="research-text">
+                We study semantic dynamics in such populations. We trace how language shifts, how shared representations form,
+                how memory persists across time, and how collective organization changes. Our work combines longitudinal observation
+                of existing agent communities with controlled experiments that isolate the mechanisms through which semantic structure
+                forms at the population level.
+              </p>
+
+              <p class="research-text">
+                Our goal is to understand when a population begins to drift, stabilize, or reorganize, and whether these changes
+                can be detected before they become obvious in individual outputs.
+              </p>
+
+              <p class="muted research-subhead">Rater state bias in learning from human feedback</p>
+
+              <p class="research-text">
+                Human feedback is one of the main signals through which AI systems learn human preferences. Each rating comes from
+                a person whose judgment can change with time, fatigue, mood, and external conditions.
+              </p>
+
+              <p class="research-text">
+                We study how systematic shifts in rater state enter preference data, shape reward models, and propagate into policy
+                optimization. We focus on shifts that accumulate over time or arise from conditions many raters share.
+              </p>
+
+              <p class="research-text">
+                Our goal is to understand how small, structured perturbations in human judgment can become persistent directions
+                in learned behavior of AI systems.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
     </section>
 
     <!-- —— ART —— -->
@@ -541,9 +599,10 @@
 }
 </script>
 <script>
-  // Keep research cards in sync: open/close all when any is toggled
+  // Keep the two gravity cards in sync: open/close both when either is toggled
+  // (scoped to the grid, so the wide AI card collapses on its own)
   (function () {
-    const all = Array.from(document.querySelectorAll('#research details.research-details'));
+    const all = Array.from(document.querySelectorAll('#research-grid details.research-details'));
     if (all.length < 2) return;
 
     let syncing = false;
