@@ -192,6 +192,38 @@
     "Rater state bias in learning with human feedback preference data"
   ],
 
+  "researchKeywords": [
+    "Kiselev spacetimes",
+    "Black holes surrounded by anisotropic fluids",
+    "Multi-component Kiselev black holes",
+    "Quasinormal modes",
+    "Horizon structure",
+    "Superradiance",
+    "Black hole shadows",
+    "Cosmological black holes",
+    "Generalized Schwarzschild-like solutions",
+    "Isotropic coordinates and conformally flat metrics",
+    "Generalized Lemaitre-Tolman-Bondi solutions",
+    "Mass function method",
+    "Inhomogeneous cosmology",
+    "Stephani cosmological models",
+    "Accelerated cosmological expansion",
+    "Friedmann models with cosmological constant",
+    "Kantowski-Sachs models",
+    "Domain walls and cosmic strings",
+    "Geodesic structure and test particle motion",
+    "Jeans equations and virial theorem",
+    "Gravitational field correlations",
+    "LLM multi-agent systems",
+    "Agent-native populations",
+    "Collective semantic change in language model agents",
+    "Embedding-space dynamics",
+    "RLHF preference data auditing",
+    "Rater state bias",
+    "Moltbook",
+    "Kopterix"
+  ],
+
   "publications": [
     {
       "name": "Measuring Collective Semantic Change in Populations of Language Model Agents",
