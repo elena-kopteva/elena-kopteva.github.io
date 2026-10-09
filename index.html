@@ -235,6 +235,9 @@
     grid-template-columns: 1fr;
   }
 }
+/* Art: rest of the gallery behind the same Read more toggle */
+.gallery-details { margin-top: 14px; }
+.gallery-details .research-more .gallery { margin-top: 4px; }
   </style>
   <script>
     // —— Theme persistence & switcher ——
@@ -474,11 +477,18 @@
         <figcaption>“The Birds” — Oil on cardboard, 1999. Private collection.</figcaption>
       </figure>
 
+    </div>
+
+    <details class="research-details gallery-details">
+      <summary aria-label="Show more artworks"></summary>
+      <div class="research-more">
+    <div class="gallery">
+
       <figure>
         <a href="assets/art/little_turtle.jpg" target="_blank" rel="noopener">
           <img src="assets/art/little_turtle.jpg" alt="Little Turtle — Oil on cardboard, 1995">
         </a>
-        <figcaption>“Little Turtle" — Oil on cardboard, 1995. Private collection.</figcaption>
+        <figcaption>“Little Turtle” — Oil on cardboard, 1995. Private collection.</figcaption>
       </figure>
 
       <figure>
@@ -494,7 +504,7 @@
         </a>
         <figcaption>“Summer Burst” — Acrylic on canvas, 2025. Sold at charity auction.</figcaption>
       </figure>
-      
+
       <figure>
         <a href="assets/art/no_way_out.jpeg" target="_blank" rel="noopener">
           <img src="assets/art/no_way_out.jpeg" alt="No Way Out — Digital, 2003">
@@ -517,6 +527,8 @@
       </figure>
 
     </div>
+      </div>
+    </details>
   </div>
 </section>
 
