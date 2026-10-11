@@ -1,562 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="default">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elena Kopteva — Personal Website</title>
-  <meta name="description" content="Personal website of Elena Kopteva (UIUC): about, research, art, and contact." />
-  <meta property="og:title" content="Elena Kopteva — Personal Website" />
-  <meta property="og:description" content="About, research, art, and contact." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://dummyimage.com/1200x630/fce7ec/7f1d1d&text=Elena+Kopteva" />
-  <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='0' fill='%234f46e5'/><text x='50' y='62' font-size='52' font-family='Arial, Helvetica, sans-serif' text-anchor='middle' fill='white'>EK</text></svg>">
-  <style>
-    /* —— Theme palettes —— */
-    :root { /* default */
-      --bg:#f7f8fb; --fg:#0b1221; --accent:#4f46e5; --muted:#5a6b86; --card:#ffffff; --line: color-mix(in oklab, var(--fg) 12%, transparent);
-      --shadow: 0 10px 20px rgba(0,0,0,.06), 0 3px 8px rgba(0,0,0,.05);
-    }
-    html[data-theme="deep"] { --bg:#0b1221; --fg:#eef2ff; --accent:#818cf8; --muted:#9fb0d4; --card:#0f172a; --line: color-mix(in oklab, var(--fg) 18%, transparent); }
-    html[data-theme="sage"] { --bg:#f6f7f3; --fg:#0f1a14; --accent:#2b7a78; --muted:#496a60; --card:#ffffff; --line: color-mix(in oklab, var(--fg) 14%, transparent); }
-    html[data-theme="rose"] { --bg:#fff7f8; --fg:#201014; --accent:#e11d48; --muted:#6b4a50; --card:#ffffff; --line: color-mix(in oklab, var(--fg) 12%, transparent); }
-
-    /* —— Base layout —— */
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--fg)}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1000px;margin-inline:auto;padding:24px}
-    header{position:sticky;top:0;background:color-mix(in oklab, var(--bg) 92%, transparent);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
-    nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand .avatar{width:48px;height:48px;background:var(--line) center/cover no-repeat url('assets/profile.jpg'); box-shadow:var(--shadow)}
-    .navlinks{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);background:color-mix(in oklab, var(--card) 95%, transparent)}
-    select.pill{appearance:none;background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px); background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right:34px}
-
-   .hero {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 28px;
-  align-items: stretch;       /* make both grid cells stretch equally */
-  padding-top: 24px;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  padding: 22px;
-  display: flex;              /* let card contents flex */
-  flex-direction: column;
-  justify-content: center;    /* vertically center content if shorter */
-}
-
-/* second card: portrait only—remove inner padding */
-.hero .card:nth-child(2) {
-  padding: 0;
-}
-
-/* portrait image */
-.portrait {
-  width: 100%;          /* fill card horizontally */
-  height: 100%;         /* match the card’s height */
-  object-fit: cover;    /* keep aspect, crop if needed */
-  display: block;
-  margin: 0;            /* remove side margins */
-  background-color: var(--bg);
-}
-    /* No rounded corners */
-    .card, .pill, .brand .avatar, img, input, select, textarea { border-radius:0; }
-
-    h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 8px}
-    h2{font-size:clamp(22px,3vw,30px);margin-top:32px;margin-bottom:8px}
-    h3{font-size:18px;margin:14px 0 8px;color:var(--muted)}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:18px}
-    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
-
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--line);background:linear-gradient(180deg, color-mix(in oklab,var(--card) 100%, transparent), color-mix(in oklab,var(--card) 84%, transparent));box-shadow:var(--shadow)}
-    .btn:hover{transform:translateY(-1px)}
-    .chip{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border:1px solid var(--line)}
-
-    section[id]{scroll-margin-top:90px}
-
-    /* —— Research covers —— */
-    .cover {
-    width:auto;
-    height:220px;         /* fixed height */
-    object-fit:contain;   /* shrink to fit instead of crop */
-    display:block;
-    margin-inline:auto;   /* center horizontally */
-    background-color:var(--bg);
-}
-
-    .research-text {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-    /* —— Subtle animation for details content —— */
-.research-details .research-more {
-  opacity: 0;
-  transform: translateY(-6px);
-  transition: opacity 180ms ease, transform 220ms ease;
-  will-change: opacity, transform;
-}
-
-/* When open, fade/slide into place */
-.research-details[open] .research-more {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Optional: make the button feel responsive */
-.research-details > summary {
-  transition: transform 120ms ease, background-color 120ms ease;
-}
-.research-details > summary:active {
-  transform: translateY(1px);
-}
-
-    @media (prefers-reduced-motion: reduce) {
-  .research-details .research-more,
-  .research-details > summary {
-    transition: none;
-    transform: none;
-  }
-}
-    
-    /* —— Research: collapsible “Read more” cards —— */
-.research-summary {
-  display: grid;
-  gap: 8px;
-  padding: 22px;
-}
-
-.research-summary h3 { margin: 14px 0 8px; }
-.research-summary .muted { margin: 0; }
-
-.research-details {
-  border-top: 1px solid var(--line);
-  margin-top: 10px;
-  padding-top: 10px;
-}
-
-/* Make summary look like your pill/button style but inside the card */
-.research-details > summary {
-  list-style: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  background: color-mix(in oklab, var(--card) 95%, transparent);
-  user-select: none;
-}
-
-.research-details > summary::-webkit-details-marker { display: none; }
-
-.research-details > summary::after {
-  content: "Read more";
-  font-weight: 600;
-}
-
-.research-details[open] > summary::after {
-  content: "Read less";
-}
-
-/* Expanded content spacing */
-.research-more {
-  margin-top: 12px;
-}
-
-/* Optional: give paragraphs inside collapsible a consistent rhythm */
-.research-more p { margin: 10px 0; }
-
-/* —— Research: wide card spanning both columns —— */
-.research-wide { margin-top: 18px; }   /* same as .grid gap */
-.research-wide .cover {
-  max-width: 100%;      /* wide image must not overflow on phones */
-  max-height: 220px;
-  height: auto;
-}
-.research-more .research-subhead { margin-top: 22px; }
-
-   /* —— Art gallery (thumbnails linking to full) —— */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-.gallery a {
-  display: block;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-.gallery img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-.gallery figcaption {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 6px;
-}
-
-/* --- Add this new responsive block BELOW the existing gallery styles --- */
-@media (max-width: 880px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .gallery a {
-    display: block;
-    aspect-ratio: 4 / 3;  /* or 1/1 for squares */
-    overflow: hidden;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-}
-
-@media (max-width: 520px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
-/* Art: rest of the gallery behind the same Read more toggle */
-.gallery-details { margin-top: 14px; }
-.gallery-details .research-more .gallery { margin-top: 4px; }
-  </style>
-  <script>
-    // —— Theme persistence & switcher ——
-    function setTheme(mode){ document.documentElement.setAttribute('data-theme', mode); try{localStorage.setItem('theme', mode);}catch(e){} }
-    (function(){ try{ const saved = localStorage.getItem('theme'); if(saved) setTheme(saved);}catch(e){} })();
-    function onThemeChange(sel){ setTheme(sel.value); }
-  </script>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <div class="avatar" aria-hidden="true"></div>
-          <span>Elena Kopteva</span>
-        </div>
-        <div class="navlinks">
-          <a class="pill" href="#about">About</a>
-          <a class="pill" href="#research">Research</a>
-          <a class="pill" href="#art">Art</a>
-          <a class="pill" href="#contact">Contact</a>
-          <select class="pill" aria-label="Select color theme" onchange="onThemeChange(this)">
-            <option value="default">Theme: Default</option>
-            <option value="deep">Theme: Deep</option>
-            <option value="sage">Theme: Sage</option>
-            <option value="rose">Theme: Rose</option>
-          </select>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- —— HERO —— -->
-    <section class="hero">
-      <div class="card">
-        <h1>Elena Kopteva</h1>
-        <p class="muted">Researcher · UIUC</p>
-       
-        <p class="muted">
-          <small>Also a creator of visual art.</small>
-        </p>
-        
-        <div class="socials" aria-label="Profiles">
-          <a class="chip" href="https://orcid.org/0000-0001-8364-0481" target="_blank" rel="noopener">ORCID</a>
-          <a class="chip" href="https://github.com/elena-kopteva" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" href="https://www.linkedin.com/in/elena-kopteva-72948434/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="chip" href="assets/CV.pdf" target="_blank" rel="noopener" id="cv-link">CV</a>
-          <a class="chip" href="cv.json" target="_blank" rel="noopener">cv.json</a>
-        </div>
-      </div>
-      <div class="card" style="padding:0">
-        <img src="assets/profile.jpg" alt="Portrait of Elena Kopteva" class="portrait">
-      </div>
-    </section>
-
-    <!-- —— ABOUT —— -->
-    <section id="about">
-      <h2>About</h2>
-      <div class="card">
-        <p class="research-text">
-          I am a theoretical physicist and Visiting Research Scientist at the University of Illinois Urbana-Champaign. 
-          Before coming to Illinois, I worked in gravity theory and theoretical cosmology in Ukraine and the Czech Republic.
-        </p>
-        <p class="research-text">
-          I work on exact solutions of Einstein's equations, develop models of black holes in cosmological media, 
-          study the interplay between cosmic expansion and local gravity, and investigate perturbations 
-          and superradiance in dirty black holes.
-        </p>        
-        <p class="research-text">
-          I also study collective semantic dynamics in populations of language model agents using lexical statistics 
-          and embedding geometry. And I investigate how variations in human rater state may introduce distortions 
-          into reinforcement learning from human feedback.
-        </p>        
-        <p class="research-text">
-        At Illinois, I teach physics and supervise student research in gravitation. 
-        </p>
-      </div>
-    </section>
-
-    <!-- —— RESEARCH —— -->
-    <section id="research">
-      <h2>Research</h2>
-      <div class="grid cols-2 research-grid" id="research-grid">
-        <article class="card" style="padding:0">
-          <img class="cover" src="assets/research/Cosmological_Models.jpg" alt="Illustration for inhomogeneous cosmological models">
-         <div class="research-summary">
-  <h3>Inhomogeneous cosmological models</h3>
-  <p class="muted">Accelerated expansion from non-standard fluid components and anisotropies.</p>
-
-  <!-- Teaser (always visible) -->
-  <p class="research-text">
-    Can the universe appear accelerated without dark energy, once we relax homogeneity and geodesic flow assumptions?
-  </p>
-
-  <details class="research-details">
-    <summary aria-label="Toggle details for inhomogeneous cosmological models"></summary>
-
-    <div class="research-more">
-      <p class="research-text">
-        The discovery that the universe is expanding at an <strong>accelerating rate</strong>,
-        a finding that led to the idea of <strong>dark energy</strong>,
-        remains one of the deepest mysteries in modern cosmology.
-      </p>
-
-      <p class="research-text">
-        Together with my colleagues, I work to understand this question using <strong>Stephani-class cosmologies</strong>, which are smooth,
-        non-rotating universes filled with a perfect fluid whose pressure changes from place to place. In these inhomogeneous
-        models, the observed cosmological acceleration can be reproduced without the need for dark energy.
-      </p>
-
-      <p class="research-text">
-        In our work, we treat these models as <strong>diagnostic labs</strong> rather than literal global cosmologies. We develop results
-        such as a closed form redshift-magnitude relation, and we continue to test these models by comparing them with
-        observations of supernovae, baryon acoustic oscillations, and structure growth, to see which versions remain
-        consistent with the universe we observe.
-      </p>
-    </div>
-  </details>
-</div>
-
-        </article>
-        <article class="card">
-          <img class="cover" src="assets/research/BH_Shadow.jpg" alt="Black holes embedded in evolving backgrounds">
-          <div class="research-summary">
-  <h3>Black holes in evolving backgrounds</h3>
-  <p class="muted">Exact/approximate solutions for compact objects in non-static cosmological media.</p>
-
-  <!-- Teaser (always visible) -->
-  <p class="research-text">
-    Real black holes live in non-empty space, surrounded by cosmic environments that can subtly shape what we observe.
-  </p>
-
-  <details class="research-details">
-    <summary aria-label="Toggle details for black holes in evolving backgrounds"></summary>
-
-    <div class="research-more">
-      <p class="research-text">
-        <strong>Cosmic environments</strong> around black holes can include dark energy-like fields, radiation, matter flows, and evolving
-        cosmological backgrounds, all of which can subtly shape what we observe.
-      </p>
-
-      <p class="research-text">
-        My colleagues and I work within General Relativity, building and analyzing <strong>exact solutions</strong> for black holes in these environments.
-        We study two broad cases:
-        (a) <strong>static, radially varying anisotropic media</strong>, such as dark energy-like fluids or networks of topological defects; and
-        (b) <strong>time-dependent cosmological backgrounds</strong> modeled by dust, radiation, or both. To construct such models, we use generalized
-        Lema&icirc;tre-Tolman-Bondi (LTB) spacetimes.
-      </p>
-
-      <p class="research-text">
-        Within an <strong>effective medium framework</strong>, we create baseline models that serve as starting points for adding cosmic structure,
-        testing perturbations, and connecting analytical results with numerical simulations.
-      </p>
-    </div>
-  </details>
-</div>
-
-        </article>
-      </div>
-
-      <!-- Wide card: AI research (collapses independently of the two cards above) -->
-      <article class="card research-wide" style="padding:22px 0">
-        <img class="cover" src="assets/research/attractor.jpg" alt="Illustration of a strange attractor for multi-agent systems and RLHF">
-        <div class="research-summary">
-          <h3>Multi-agent systems and RLHF</h3>
-         
-          <details class="research-details">
-            <summary aria-label="Toggle details for multi-agent systems and RLHF"></summary>
-
-            <div class="research-more">
-              <p class="muted">Semantic dynamics in autonomous agent populations</p>
-              
-              <p class="research-text">
-                When autonomous agents share an environment, communicate, and adapt, collective patterns emerge and keep evolving as interaction continues.
-              </p>
-
-              <p class="research-text">
-                We study semantic dynamics in such populations. We trace how language shifts, how shared representations form,
-                how memory persists across time, and how collective organization changes. Our work combines longitudinal observation
-                of existing agent communities with controlled experiments that isolate the mechanisms through which semantic structure
-                forms at the population level.
-              </p>
-
-              <p class="research-text">
-                Our goal is to understand when a population begins to drift, stabilize, or reorganize, and whether these changes
-                can be detected before they become obvious in individual outputs.
-              </p>
-
-              <p class="muted research-subhead">Rater state bias in learning from human feedback</p>
-
-              <p class="research-text">
-                Human feedback is one of the main signals through which AI systems learn human preferences. Each rating comes from
-                a person whose judgment can change with time, fatigue, mood, and external conditions.
-              </p>
-
-              <p class="research-text">
-                We study how systematic shifts in rater state enter preference data, shape reward models, and propagate into policy
-                optimization. We focus on shifts that accumulate over time or arise from conditions many raters share.
-              </p>
-
-              <p class="research-text">
-                Here, our goal is to understand how small, structured perturbations in human judgment can become persistent directions
-                in learned behavior of AI systems.
-              </p>
-            </div>
-          </details>
-        </div>
-      </article>
-    </section>
-
-    <!-- —— ART —— -->
-   <section id="art">
-  <h2>Art</h2>
-  <div class="card">
-  <p class="muted">Thumbnails below link to full-size images.</p>
-    <div class="gallery">
-
-      <figure>
-        <a href="assets/art/Smitha.png" target="_blank" rel="noopener">
-          <img src="assets/art/Smitha.png" alt="Smitha — Digital, 2026">
-        </a>
-        <figcaption>“Smitha” — Digital, 2026. Private collection.</figcaption>
-      </figure>
-
-      <figure>
-        <a href="assets/art/physicist.jpg" target="_blank" rel="noopener">
-          <img src="assets/art/physicist.jpg" alt="Physicist — Oil on cardboard, 2000">
-        </a>
-        <figcaption>“Physicist” — Oil on cardboard, 2000. Private collection.</figcaption>
-      </figure>
-
-      <figure>
-        <a href="assets/art/the_birds.jpeg" target="_blank" rel="noopener">
-          <img src="assets/art/the_birds.jpeg" alt="The Birds — Oil on cardboard, 1999">
-        </a>
-        <figcaption>“The Birds” — Oil on cardboard, 1999. Private collection.</figcaption>
-      </figure>
-
-    </div>
-
-    <details class="research-details gallery-details">
-      <summary aria-label="Show more artworks"></summary>
-      <div class="research-more">
-    <div class="gallery">
-
-      <figure>
-        <a href="assets/art/the_boy_turned_on_the_sun.jpeg" target="_blank" rel="noopener">
-          <img src="assets/art/the_boy_turned_on_the_sun.jpeg" alt="The Boy Turned On the Sun — Oil on cardboard, 1999">
-        </a>
-        <figcaption>“The Boy Turned On the Sun” — Oil on cardboard, 1999. Private collection.</figcaption>
-      </figure>
-
-      <figure>
-        <a href="assets/art/summer_burst.jpg" target="_blank" rel="noopener">
-          <img src="assets/art/summer_burst.jpg" alt="Summer Burst — Acrylic on canvas, 2025">
-        </a>
-        <figcaption>“Summer Burst” — Acrylic on canvas, 2025. Sold at charity auction.</figcaption>
-      </figure>
-
-      <figure>
-        <a href="assets/art/no_way_out.jpeg" target="_blank" rel="noopener">
-          <img src="assets/art/no_way_out.jpeg" alt="No Way Out — Digital, 2003">
-        </a>
-        <figcaption>“No Way Out” — Digital, 2003.</figcaption>
-      </figure>
-
-      <figure>
-        <a href="assets/art/feeding_the_dog.jpg" target="_blank" rel="noopener">
-          <img src="assets/art/feeding_the_dog.jpg" alt="Feeding the Dog — Digital, 2010">
-        </a>
-        <figcaption>“Feeding the Dog” — Digital, 2010. Gifted to a friend.</figcaption>
-      </figure>
-
-      <figure>
-        <a href="assets/art/winter_dog.jpeg" target="_blank" rel="noopener">
-          <img src="assets/art/winter_dog.jpeg" alt="Winter Dog — Oil on cardboard, 1998">
-        </a>
-        <figcaption>“Winter Dog” — Oil on cardboard, 1998. Private collection.</figcaption>
-      </figure>
-
-      <figure>
-        <a href="assets/art/shaman2.jpeg" target="_blank" rel="noopener">
-          <img src="assets/art/shaman2.jpeg" alt="Shaman" loading="lazy">
-        </a>
-        <figcaption>“Shaman”</figcaption>
-      </figure>
-
-    </div>
-      </div>
-    </details>
-  </div>
-</section>
-
-    <!-- —— CONTACT —— -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p><strong>Email:</strong> <a href="mailto:koptieva@illinois.edu">koptieva@illinois.edu</a></p>
-        <p><strong>Affiliation:</strong> University of Illinois Urbana‑Champaign (UIUC)</p>
-        <p class="muted">For collaboration inquiries, include a short description of your interests and any relevant links.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Elena Kopteva · Built with ♥ on GitHub Pages
-    </div>
-  </footer>
-
-  <script>
-    // Update year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Initialize theme dropdown from saved value
-    (function(){ try{ const saved = localStorage.getItem('theme')||'default'; const sel=document.querySelector('select[aria-label="Select color theme"]'); if(sel){ sel.value=saved; }}catch(e){} })();
-  </script>
-
-  <!-- Structured data -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elena Kopteva | Theoretical physics</title>
+  <meta name="description" content="Elena Kopteva, theoretical physicist at the University of Illinois Urbana-Champaign. General relativity, cosmology, black holes, and agent research.">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://elena-kopteva.github.io/">
+  <meta property="og:title" content="Elena Kopteva | Theoretical physics">
+  <meta property="og:description" content="Elena Kopteva, theoretical physicist at the University of Illinois Urbana-Champaign. General relativity, cosmology, black holes, and agent research.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elena-kopteva.github.io/">
+  <meta property="og:image" content="https://elena-kopteva.github.io/assets/profile.jpg">
+  <meta property="og:image:alt" content="Elena Kopteva beside a blackboard">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/legacy-links.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -565,7 +23,7 @@
   "alternateName": "Olena Koptieva",
   "url": "https://elena-kopteva.github.io",
   "email": "mailto:koptieva@illinois.edu",
-  "jobTitle": "Visiting Teaching and Research Faculty",
+  "jobTitle": "Visiting Research Scientist (Teaching and Research)",
   "description": "Theoretical physicist specializing in exact solutions of Einstein's equations, black holes in evolving cosmological backgrounds, black hole perturbations, superradiance, and quasinormal modes.",
   "affiliation": {
     "@type": "Organization",
@@ -573,16 +31,16 @@
     "url": "https://illinois.edu"
   },
   "identifier": [
-  {
-    "@type": "PropertyValue",
-    "propertyID": "ORCID",
-    "value": "https://orcid.org/0000-0001-8364-0481"
-  },
-  {
-    "@type": "PropertyValue",
-    "propertyID": "arXiv",
-    "value": "https://arxiv.org/a/kopteva_e_1"
-  }
+    {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "https://orcid.org/0000-0001-8364-0481"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "arXiv",
+      "value": "https://arxiv.org/a/kopteva_e_1"
+    }
   ],
   "knowsAbout": [
     "General Relativity",
@@ -594,45 +52,94 @@
     "Kiselev Spacetimes",
     "Stephani Cosmologies",
     "Nonlinear Dynamics"
-],
-  "knowsLanguage": ["English", "Ukrainian", "Russian", "Czech"],
+  ],
+  "knowsLanguage": [
+    "English",
+    "Ukrainian",
+    "Russian",
+    "Czech"
+  ],
   "sameAs": [
-  "https://orcid.org/0000-0001-8364-0481",
-  "https://arxiv.org/a/kopteva_e_1",
-  "https://github.com/elena-kopteva",
-  "https://www.linkedin.com/in/elena-kopteva-72948434/"
-],
+    "https://orcid.org/0000-0001-8364-0481",
+    "https://arxiv.org/a/kopteva_e_1",
+    "https://github.com/elena-kopteva",
+    "https://www.linkedin.com/in/elena-kopteva-72948434/"
+  ],
   "subjectOf": {
     "@type": "DigitalDocument",
     "name": "Curriculum Vitae (structured)",
     "encodingFormat": "application/json",
     "url": "https://elena-kopteva.github.io/cv.json"
-  }
+  },
+  "image": "https://elena-kopteva.github.io/assets/profile.jpg"
 }
-</script>
-<script>
-  // Keep the two gravity cards in sync: open/close both when either is toggled
-  // (scoped to the grid, so the wide AI card collapses on its own)
-  (function () {
-    const all = Array.from(document.querySelectorAll('#research-grid details.research-details'));
-    if (all.length < 2) return;
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header container">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-current="page">Elena Kopteva</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="art.html">Art</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container" tabindex="-1">
+    <section class="intro" aria-labelledby="identity-heading">
+      <div>
+        <p class="eyebrow">Theoretical physics</p>
+        <h1 id="identity-heading">Elena Kopteva</h1>
+        <p class="identity">General relativity, cosmology,<br>and black hole physics.</p>
+        <p class="affiliation">Visiting Research Scientist<br>Department of Physics<br>University of Illinois Urbana-Champaign</p>
+        <p>I work on exact solutions of Einstein's equations and the interplay between cosmic expansion and local gravity.</p>
+        <div class="text-links"><a href="publications.html">Publications</a><a href="assets/CV.pdf">CV (PDF)</a><a href="mailto:koptieva@illinois.edu">Email</a></div>
+      </div>
+      <figure class="portrait">
+        <img src="assets/profile.jpg" width="1332" height="878" alt="Elena Kopteva beside a blackboard">
+      </figure>
+    </section>
 
-    let syncing = false;
+    <section class="home-section" id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research directions</h2>
+      <div class="research-list">
+        <article class="research-item">
+          <h3><a href="research.html#black-holes">Black holes in evolving backgrounds</a></h3>
+          <p>Exact solutions for black holes in cosmological media, with studies of horizon structure, perturbations, and superradiance.</p>
+        </article>
+        <article class="research-item">
+          <h3><a href="research.html#cosmology">Inhomogeneous cosmology</a></h3>
+          <p>Models of cosmic expansion that explore the effects of spatially varying pressure and the relation between local geometry and observation.</p>
+        </article>
+        <article class="research-item">
+          <h3><a href="research.html#agent-systems">Agent populations and human feedback</a></h3>
+          <p>Collective semantic dynamics in language model agents and the effects of variation in human rater state on preference data.</p>
+        </article>
+      </div>
+      <p class="section-link"><a href="research.html">Research and related papers</a></p>
+    </section>
 
-    all.forEach(d => {
-      d.addEventListener('toggle', () => {
-        if (syncing) return;
-        syncing = true;
-
-        const openNow = d.open;
-        all.forEach(other => {
-          if (other !== d) other.open = openNow;
-        });
-
-        syncing = false;
-      });
-    });
-  })();
-</script>
+    <section class="home-note" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">At Illinois</h2>
+      <div>
+        <p>I teach physics and supervise student research in gravitation. Before coming to Illinois, I worked in gravity theory and theoretical cosmology in Ukraine and the Czech Republic.</p>
+        <p class="section-link"><a href="cv.html">Academic background and teaching</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer container">
+    <div class="footer-inner">
+      <span>© Elena Kopteva</span>
+      <div class="footer-links">
+        <a href="https://orcid.org/0000-0001-8364-0481">ORCID</a>
+        <a href="https://arxiv.org/a/kopteva_e_1">arXiv</a>
+        <a href="mailto:koptieva@illinois.edu">Email</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
