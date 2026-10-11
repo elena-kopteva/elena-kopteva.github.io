@@ -10,7 +10,7 @@ The site uses static HTML, one shared CSS file, and a small script that preserve
 - `research.html` contains the research explanations and related papers.
 - `publications.html` lists every publication and research archive in `cv.json`.
 - `cv.html` presents appointments, education, teaching, supervision, and the broader academic record.
-- `art.html` contains all nine works exhibited on the former homepage. Images link to the originals and preserve the full artwork.
+- `art.html` contains a selection of visual work. Images link to the originals and preserve the full artwork.
 - `contact.html` provides email, affiliation, and professional profiles.
 
 The original photograph, research illustrations, artwork files, `assets/CV.pdf`, and `cv.json` remain in place. Former homepage links to `#research`, `#art`, and `#contact` open their respective pages. `#about` remains on the homepage.
