@@ -32,11 +32,11 @@ p { margin: 0 0 20px; }
 .eyebrow { font: 12px/1.7 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 15px; }
 .muted, .metadata { color: var(--muted); }
 .metadata { font: 14px/1.65 var(--sans); }
-.intro { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.intro { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .intro h1 { margin-bottom: 17px; }
 .identity { font-size: 23px; line-height: 1.5; margin-bottom: 15px; }
 .affiliation { font: 14px/1.7 var(--sans); color: var(--muted); margin-bottom: 24px; }
-.portrait { margin: 10px 0 0; }
+.portrait { margin: 54px 0 0; }
 .portrait img { width: 100%; }
 .text-links { display: flex; flex-wrap: wrap; gap: 10px 24px; font: 14px/1.8 var(--sans); }
 .home-section { margin-top: 58px; }
@@ -101,6 +101,7 @@ p { margin: 0 0 20px; }
   .site-nav { margin-top: 16px; gap: 10px 23px; }
   main { padding-top: 38px; padding-bottom: 52px; }
   .intro { grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; }
+  .portrait { margin-top: 32px; }
   .identity { font-size: 21px; }
   .research-item, .home-note { grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
   .gallery { gap: 36px 25px; }
@@ -108,7 +109,7 @@ p { margin: 0 0 20px; }
 }
 @media (max-width: 680px) {
   .intro { display: flex; flex-direction: column; gap: 26px; }
-  .portrait { width: min(100%, 400px); margin-top: 0; }
+  .portrait { width: min(100%, 440px); margin-top: 0; }
 }
 @media (max-width: 560px) {
   body { font-size: 17px; }
