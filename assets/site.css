@@ -34,6 +34,7 @@ p { margin: 0 0 20px; }
 .metadata { font: 14px/1.65 var(--sans); }
 .intro { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .intro > div { max-width: 434px; }
+.intro .research-text { text-align: justify; text-justify: inter-word; }
 .intro h1 { margin-bottom: 17px; }
 .identity { font-size: 23px; line-height: 1.5; margin-bottom: 15px; }
 .affiliation { font: 14px/1.7 var(--sans); color: var(--muted); margin-bottom: 24px; }
