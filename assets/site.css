@@ -38,7 +38,7 @@ p { margin: 0 0 20px; }
 .intro h1 { margin-bottom: 17px; }
 .identity { font-size: 21px; line-height: 1.45; margin-bottom: 15px; }
 .affiliation { font: 14px/1.7 var(--sans); color: var(--muted); margin-bottom: 24px; }
-.portrait { max-width: 360px; margin: 40px 0 0;  transform: translateX(20px); }
+.portrait { max-width: 360px; margin: 33px 0 0;  transform: translateX(20px); }
 .portrait img { width: 90%; }
 .text-links { display: flex; flex-wrap: wrap; gap: 10px 24px; font: 14px/1.8 var(--sans); }
 .home-section { margin-top: 58px; }
